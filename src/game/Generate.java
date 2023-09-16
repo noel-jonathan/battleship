@@ -16,11 +16,11 @@ public class Generate {
         if (isHorizontal) {
             return new Cell(
                     (int) (Math.random() * (Board.SIZE - length)),
-                    (int) (Math.random() * Board.SIZE), Cell.SHIP);
+                    (int) (Math.random() * Board.SIZE));
         } else {
             return new Cell(
                     (int) (Math.random() * Board.SIZE),
-                    (int) (Math.random() * (Board.SIZE - length)), Cell.SHIP);
+                    (int) (Math.random() * (Board.SIZE - length)));
         }
     }
 

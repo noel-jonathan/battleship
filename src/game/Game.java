@@ -7,13 +7,8 @@ public class Game {
 
     public static void start() {
         System.out.println("WELCOME TO BATTLESHIPS\n");
-        Ship[] ships = Generate.ships();
         Board board = new Board(Generate.board());
-
-        for (Ship ship:
-             ships) {
-            ship.placeOn(board);
-        }
+        Ship[] ships = Generate.ships();
         System.out.println(board);
         System.out.println(ships[0]);
         System.out.println(ships[1]);

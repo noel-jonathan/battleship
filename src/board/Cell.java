@@ -1,17 +1,24 @@
 package board;
 
-import java.util.Objects;
-
 public class Cell {
     public static final char WATER = '~';
-    public static final char SHIP = 'S';
     private int row;
     private int col;
     private char value;
+    private boolean isAvailable;
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailability(boolean available) {
+        isAvailable = available;
+    }
 
     public Cell(int row, int col) {
         this.row = row;
         this.col = col;
+        this.isAvailable = true;
     }
 
     public Cell(int row, int col, char value) {

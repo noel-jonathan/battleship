@@ -1,12 +1,7 @@
 package board;
-
-import game.Game;
-
-import java.util.Arrays;
-
 public class Board {
     public static final int SIZE = 10;
-    private Cell[][] cells;
+    private final Cell[][] cells;
 
     public Board(Cell[][] cells) {
         this.cells = cells;
