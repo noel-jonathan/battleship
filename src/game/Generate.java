@@ -7,6 +7,11 @@ import ship.*;
 import java.util.Random;
 
 public class Generate {
+    public static boolean randomBoolean() {
+        Random random = new Random();
+        return random.nextBoolean();
+    }
+
     public static Cell firstCellInPosition(int length, boolean isHorizontal) {
         if (isHorizontal) {
             return new Cell(
@@ -17,11 +22,6 @@ public class Generate {
                     (int) (Math.random() * Board.SIZE),
                     (int) (Math.random() * (Board.SIZE - length)), Cell.SHIP);
         }
-    }
-
-    public static boolean randomBoolean() {
-        Random random = new Random();
-        return random.nextBoolean();
     }
 
     public static Cell[] shipPosition(int length, boolean isHorizontal) {
@@ -48,13 +48,12 @@ public class Generate {
     }
 
     static Ship[] ships() {
-        Ship[] ships = {
+        return new Ship[]{
                 new Carrier(),
                 new Battleship(),
                 new Submarine(),
                 new Destroyer(),
                 new PatrolBoat()
         };
-        return ships;
     }
 }

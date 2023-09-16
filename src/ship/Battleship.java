@@ -7,7 +7,7 @@ public class Battleship extends Ship {
     public static final int BATTLESHIP_LENGTH = 4;
 
     public Battleship() {
-        super(new Position(BATTLESHIP_LENGTH));
+        super(BATTLESHIP_LENGTH);
     }
 
 }

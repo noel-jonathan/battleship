@@ -1,24 +1,33 @@
 package ship;
-import game.Game;
+import board.Board;
+import board.Cell;
 
 import board.Position;
+import game.Generate;
+
+import java.util.StringJoiner;
 
 public abstract class Ship {
+    private final boolean isHorizontal;
 
-    private final Position position;
+    private final Cell[] position;
 
-    public Ship(Position position) {
-        this.position = position;
-    }
-
-    public Position getPosition() {
-        return position;
+    public Ship(int length) {
+        this.isHorizontal = Generate.randomBoolean();
+        this.position = Generate.shipPosition(length, this.isHorizontal);
     }
 
     @Override
     public String toString() {
-        return "Ship{" +
-                "position=" + position +
-                '}';
+        StringJoiner stringJoiner = new StringJoiner(", ", "(", ")");
+        for (Cell cell :
+                position) {
+            stringJoiner.add(String.format("(%d, %d)", cell.getRow(), cell.getCol()));
+        }
+        return stringJoiner.toString();
+    }
+
+    public void placeOn(Board board) {
+
     }
 }
