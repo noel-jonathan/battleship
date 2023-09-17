@@ -47,13 +47,4 @@ public class Generate {
         return board;
     }
 
-    static Ship[] ships() {
-        return new Ship[]{
-                new Carrier(),
-                new Battleship(),
-                new Submarine(),
-                new Destroyer(),
-                new PatrolBoat()
-        };
-    }
 }
