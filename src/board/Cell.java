@@ -2,10 +2,11 @@ package board;
 
 public class Cell {
     public static final char WATER = '~';
-    private int row;
-    private int col;
+    private final int row;
+    private final int col;
     private char value;
     private boolean isAvailable;
+    private boolean isShip;
 
     public boolean isAvailable() {
         return isAvailable;
@@ -19,6 +20,7 @@ public class Cell {
         this.row = row;
         this.col = col;
         this.isAvailable = true;
+        this.isShip = false;
     }
 
     public Cell(int row, int col, char value) {
@@ -46,10 +48,8 @@ public class Cell {
         return String.valueOf(this.value);
     }
 
-    public boolean compare(Cell that) {
-        if (this == that) return true;
-        if (that == null || getClass() != that.getClass()) return false;
-        return row == that.row && col == that.col;
+    public void isShip(boolean isShip) {
+        this.isShip = isShip;
     }
 
 }
