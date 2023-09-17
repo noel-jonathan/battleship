@@ -48,7 +48,7 @@ public class Cell {
         return String.valueOf(this.value);
     }
 
-    public void isShip(boolean isShip) {
+    public void setIsShip(boolean isShip) {
         this.isShip = isShip;
     }
 
