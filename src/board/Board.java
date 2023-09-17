@@ -40,8 +40,8 @@ public class Board {
             for (int i = -1; i < 2; i++) {
                 for (int j = -1; j < 2; j++) {
                     this.cells
-                            [Math.min(Math.max(0, cell.getRow() + i), 9)]
-                            [Math.min(Math.max(0, cell.getCol()+ j), 9)]
+                            [Math.min(Math.max(0, cell.getRow() + i), Board.SIZE - 1)]
+                            [Math.min(Math.max(0, cell.getCol()+ j), Board.SIZE - 1)]
                             .setAvailability(false);
 
                 }
