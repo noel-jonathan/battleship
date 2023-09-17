@@ -1,14 +1,21 @@
 package game;
 
 import board.Board;
-import ship.*;
 
 public class Game {
+    private Board board;
 
-    public static void start() {
+    public void reset() {
         System.out.println("WELCOME TO BATTLESHIPS\n");
-        Board board = new Board();
+        board = new Board();
         System.out.println(board);
 
+    }
+
+    public void loop() {
+        boolean gameOver = false;
+        while (!gameOver){
+            Player.shoots(board);
+        }
     }
 }
