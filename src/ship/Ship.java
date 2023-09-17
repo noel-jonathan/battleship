@@ -11,8 +11,11 @@ public abstract class Ship {
     private final boolean isHorizontal;
 
     private final Cell[] position;
+    private final String shipClass;
 
-    public Ship(int length) {
+
+    public Ship(int length, String shipClass) {
+        this.shipClass = shipClass;
         this.isHorizontal = Generate.randomBoolean();
         this.position = Generate.shipPosition(length, this.isHorizontal);
     }
