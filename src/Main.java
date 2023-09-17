@@ -5,7 +5,6 @@ public class Main {
         Game game = new Game();
         game.reset();
         game.loop();
-//        Player.attacks(int row, int col)
 //        Game.end
     }
 

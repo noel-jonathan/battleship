@@ -12,6 +12,7 @@ public class Ship {
     private final boolean isHorizontal;
     private String shipClass;
     private int length;
+    private int hitCounter;
 
 
     public Ship(int length, String shipClass, Board board) {
@@ -19,6 +20,7 @@ public class Ship {
         this.shipClass = shipClass;
         this.isHorizontal = randomBoolean();
         this.position = placeShipOn(board);
+        this.hitCounter = 0;
     }
 
     public Cell[] placeShipOn(Board board){

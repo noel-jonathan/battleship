@@ -5,6 +5,8 @@ import board.Cell;
 
 import java.util.Random;
 
+import static board.Cell.WATER;
+
 public class BoardGenerator {
     public static boolean randomBoolean() {
         Random random = new Random();
@@ -29,7 +31,7 @@ public class BoardGenerator {
         Cell[][] board = new Cell[Board.SIZE][Board.SIZE];
         for (int i = 0; i < Board.SIZE; i++) {
             for (int j = 0; j < Board.SIZE; j++) {
-                board[i][j] = new Cell(i, j, Cell.WATER);
+                board[i][j] = new Cell(i, j, WATER);
             }
         }
         return board;

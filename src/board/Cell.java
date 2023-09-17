@@ -2,6 +2,9 @@ package board;
 
 public class Cell {
     public static final char WATER = '~';
+    public static final char MISS = 'x';
+    public static final char HIT = 'H';
+
     private final int row;
     private final int col;
     private char value;
@@ -29,6 +32,10 @@ public class Cell {
     }
     public char getValue() {
         return value;
+    }
+
+    public boolean isShip() {
+        return isShip;
     }
 
     public void setValue(char value) {
